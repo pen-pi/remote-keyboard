@@ -249,11 +249,11 @@ def waitConnectionsAndRun():
       print incoming
       try:
          device = open(devLocation, 'rb+')
-         processLine(incoming, device):
+         processLine(incoming, device)
          device.write((NULL_CHAR*8).encode())
          device.close()
       except:
-         sys.exit("Error: Can not open "+devLocation)
+         sys.exit("Error: Can not open " + devLocation)
       incoming = c.recv(1024)
    c.close() 
 
@@ -261,7 +261,7 @@ def waitConnectionsAndRun():
 ########################### MAIN ###############################
 ################################################################
 
-
+devLocation = "/dev/hidg0"
 
 s = socket.socket()          
 print "Socket successfully created"

@@ -77,7 +77,7 @@ def key(event):
       elif("Alt" in event.keysym):
          alt = alt ^ True #toggle
          onlyModifier= True
-      elif("Caps_Lock"):
+      elif("Caps_Lock" in event.keysym):
          message = "CAPSLOCK"
       elif("Prior" in event.keysym):
          message = "PAGEUP"
